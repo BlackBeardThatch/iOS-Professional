@@ -13,6 +13,7 @@
 		F38981D52BEF747E00540997 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F38981D42BEF747E00540997 /* Base */; };
 		F38981DF2BEF798D00540997 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38981DE2BEF798D00540997 /* LoginView.swift */; };
 		F38982022BF3006100540997 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38982012BF3006100540997 /* OnboardingContainerViewController.swift */; };
+		F38CD4B12BF8AE7A00805558 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38CD4B02BF8AE7A00805558 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F38981D62BEF747E00540997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38981DE2BEF798D00540997 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F38982012BF3006100540997 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		F38CD4B02BF8AE7A00805558 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F38982012BF3006100540997 /* OnboardingContainerViewController.swift */,
+				F38CD4B02BF8AE7A00805558 /* OnboardingViewController.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				F38981DF2BEF798D00540997 /* LoginView.swift in Sources */,
 				F38981CD2BEF747D00540997 /* LoginViewController.swift in Sources */,
+				F38CD4B12BF8AE7A00805558 /* OnboardingViewController.swift in Sources */,
 				F38981C92BEF747D00540997 /* AppDelegate.swift in Sources */,
 				F38982022BF3006100540997 /* OnboardingContainerViewController.swift in Sources */,
 			);
