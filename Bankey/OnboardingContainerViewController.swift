@@ -87,12 +87,10 @@ class OnboardingContainerViewController: UIViewController {
         
         view.addSubview(closeButton)
         
-        let margin = view.layoutMarginsGuide
-        
         // Close
         NSLayoutConstraint.activate([
             closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: margin.topAnchor, multiplier: 2)
+            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
         ])
     }
 }
