@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dummyViewController.delegate = self
         
         window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
         
         return true
     }
