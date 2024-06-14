@@ -34,6 +34,13 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    // animation variables
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    var titleLeadingAnchor: NSLayoutConstraint?
+    var subTitleLeadingAnchor: NSLayoutConstraint?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +51,11 @@ class LoginViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         signinButton.configuration?.showsActivityIndicator = false
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
 }
 
 extension LoginViewController {
@@ -53,6 +65,7 @@ extension LoginViewController {
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 50, weight: .semibold)
+        titleLabel.alpha = 0
         
         
         introLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +73,7 @@ extension LoginViewController {
         introLabel.textAlignment = .center
         introLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         introLabel.numberOfLines = 0
+        introLabel.alpha = 0
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -106,16 +120,21 @@ extension LoginViewController {
         
         // IntroLabel
         NSLayoutConstraint.activate([
-            introLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             introLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: introLabel.bottomAnchor, multiplier: 2)
         ])
         
+        subTitleLeadingAnchor = introLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        subTitleLeadingAnchor?.isActive = true
+        
         // TitleLabel
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            introLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 2.5)
+            introLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 2.5),
+            titleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
         ])
+        
+        titleLeadingAnchor = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
         
     }
 }
@@ -151,5 +170,32 @@ extension LoginViewController {
         errorMessageLabel.text = message
     }
     
+}
+
+// MARK: - Animation
+extension LoginViewController {
+    
+    private func animate() {
+        let duration = 2.0
+        
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.subTitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 0.2)
+        
+        let animator3 = UIViewPropertyAnimator(duration: duration * 2, curve: .easeInOut) {
+            self.titleLabel.alpha = 1
+            self.introLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation(afterDelay: 0.2)
+    }
 }
 
