@@ -15,6 +15,7 @@
 		F3664C352C15B64A00049C3F /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3664C342C15B64A00049C3F /* CurrencyFormatterTests.swift */; };
 		F3664C672C1AED7000049C3F /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3664C662C1AED7000049C3F /* NSNotificationName.swift */; };
 		F3664C692C1AF5BE00049C3F /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3664C682C1AF5BE00049C3F /* UITextField+SecureToggle.swift */; };
+		F3664C6C2C1F20CB00049C3F /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3664C6B2C1F20CB00049C3F /* ShakeyBellView.swift */; };
 		F38981C92BEF747D00540997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38981C82BEF747D00540997 /* AppDelegate.swift */; };
 		F38981CD2BEF747D00540997 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38981CC2BEF747D00540997 /* LoginViewController.swift */; };
 		F38981D22BEF747E00540997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38981D12BEF747E00540997 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		F3664C342C15B64A00049C3F /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		F3664C662C1AED7000049C3F /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		F3664C682C1AF5BE00049C3F /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		F3664C6B2C1F20CB00049C3F /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		F38981C52BEF747D00540997 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38981C82BEF747D00540997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38981CC2BEF747D00540997 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = BankeyUintTests;
 			sourceTree = "<group>";
 		};
+		F3664C6A2C1F207B00049C3F /* Componemts */ = {
+			isa = PBXGroup;
+			children = (
+				F3664C6B2C1F20CB00049C3F /* ShakeyBellView.swift */,
+			);
+			path = Componemts;
+			sourceTree = "<group>";
+		};
 		F38981BC2BEF747D00540997 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 				F38982002BF3001200540997 /* Onboarding */,
 				F3A441CD2C0CBD8E0091F24D /* AccountSummary */,
 				F38CD4B42C03122300805558 /* Utils */,
+				F3664C6A2C1F207B00049C3F /* Componemts */,
 				F38981DC2BEF78ED00540997 /* Files */,
 			);
 			path = Bankey;
@@ -307,6 +318,7 @@
 			files = (
 				F38981DF2BEF798D00540997 /* LoginView.swift in Sources */,
 				F3664C222C115C5800049C3F /* AccountSummaryCell.swift in Sources */,
+				F3664C6C2C1F20CB00049C3F /* ShakeyBellView.swift in Sources */,
 				F38CD4B62C03123C00805558 /* LocalState.swift in Sources */,
 				F38981CD2BEF747D00540997 /* LoginViewController.swift in Sources */,
 				F3664C262C15A60D00049C3F /* CurrencyFormatter.swift in Sources */,
